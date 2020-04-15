@@ -19,7 +19,7 @@ pipeline{
 	}
 	post{
 		always{
-			archiveArtifacts artifacts: 'output/**'
+			archiveArtifacts artifacts: 'build/libs/**/*.jar'
 			bat "docker-compose down"
 			bat "sudo rm -rf output/"
 		}
